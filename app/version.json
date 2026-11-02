@@ -1,5 +1,5 @@
 {
-  "version": 14,
-  "notes": "If Gmail turns down a link, Heads Up now shows Gmail's own reason and what to do.",
+  "version": 15,
+  "notes": "Updates and announcements now come from github.com/lmgoffical/heads-up, the new name of the Heads Up account.",
   "files": ["app.html", "server.js", "Heads Up.vbs", "icon.png", "heads-up.ico", "README.txt"]
 }

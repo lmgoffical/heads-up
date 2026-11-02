@@ -524,7 +524,7 @@ footer { font-size: 12.5px; color: var(--faint); text-align: center; padding-top
 </div>
 
 <script>
-const APP_VERSION = 14;   // keep in step with app/version.json in the GitHub repo
+const APP_VERSION = 15;   // keep in step with app/version.json in the GitHub repo
 const SEARCH_ENGINES = {
   google: { name: "Google", url: "https://www.google.com/search?q=" },
   bing: { name: "Bing", url: "https://www.bing.com/search?q=" },
@@ -533,6 +533,8 @@ const SEARCH_ENGINES = {
 };
 // Newest first. Add an entry here with every release; it feeds the patch notes and the bell.
 const CHANGELOG = [
+  { v: 15, date: "2026-11-01", title: "New home on GitHub", notes: [
+    "Updates and announcements now come from github.com/lmgoffical/heads-up, the new name of the Heads Up account." ] },
   { v: 14, date: "2026-10-25", title: "Gmail linking help", notes: [
     "If Gmail turns down a link, Heads Up now shows Gmail's own reason and what to do about it." ] },
   { v: 13, date: "2026-10-25", title: "Easier Gmail linking", notes: [
@@ -1508,7 +1510,7 @@ $("customBtn").onclick = () => openCustomize();
 for (const id of ["authDlg", "customDlg", "adminDlg", "gmailDlg"]) $(id).addEventListener("click", (e) => { if (e.target === $(id)) $(id).close(); });
 
 // ---------- announcements from the Heads Up owner ----------
-const ANNOUNCE_RAW = "https://raw.githubusercontent.com/THATLMG/heads-up/main/announcements.json";
+const ANNOUNCE_RAW = "https://raw.githubusercontent.com/lmgoffical/heads-up/main/announcements.json";
 const validAnn = (a) => a && typeof a.id === "string" && typeof a.title === "string" && a.title.length <= 120 && (a.message == null || typeof a.message === "string");
 const activeAnnouncements = () => announcements.filter((a) => !a.expires || ts(a.expires) > Date.now());
 async function loadAnnouncements() {

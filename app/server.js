@@ -17,7 +17,7 @@ const IDLE_EXIT_MS = 20 * 60 * 1000;   // the open app checks in every 4 minutes
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36";
 
 // Updates: the files listed in app/version.json on GitHub replace the ones here when its version is higher.
-const UPDATE_BASE = process.env.HEADSUP_UPDATE_BASE || "https://raw.githubusercontent.com/THATLMG/heads-up/main/app/";
+const UPDATE_BASE = process.env.HEADSUP_UPDATE_BASE || "https://raw.githubusercontent.com/lmgoffical/heads-up/main/app/";
 const UPDATABLE = new Set(["app.html", "server.js", "Heads Up.vbs", "icon.png", "heads-up.ico", "README.txt"]);
 const UPDATE_EVERY_MS = 30 * 60 * 1000;   // while the app is open (it asks /api/version every 4 minutes)
 let lastCheckAt = 0;
@@ -30,7 +30,7 @@ const MAX_USERS = 50;
 
 // Announcements: everyone reads announcements.json from GitHub. Only the owner's PC, which has the
 // repository checked out, can publish new ones (by committing and pushing that file).
-const ANNOUNCE_URL = process.env.HEADSUP_ANNOUNCE_URL || "https://raw.githubusercontent.com/THATLMG/heads-up/main/announcements.json";
+const ANNOUNCE_URL = process.env.HEADSUP_ANNOUNCE_URL || "https://raw.githubusercontent.com/lmgoffical/heads-up/main/announcements.json";
 const REPO_DIR = process.env.HEADSUP_REPO || path.join(os.homedir(), "heads-up");
 
 // Same document wrapper the Claude artifact viewer puts around the page.
